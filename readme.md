@@ -24,7 +24,7 @@ this is a known issue, see also
 high-quality is 600dpi, to produce good quality when printing
 
 JP2 raster images, because JP2 offers better compression than JPG.
-on the downside, JP2 requires more memory, but most PDf viewers should have enough memory.
+on the downside, JP2 requires more memory, but most PDF viewers should have enough memory.
 WEBP raster images are not supported in PDF files
 
 ## analyze pdf size
