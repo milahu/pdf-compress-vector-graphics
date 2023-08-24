@@ -36,7 +36,7 @@ gs -q -o onlyimages.pdf -sDEVICE=pdfwrite -dFILTERVECTOR -dFILTERTEXT input.pdf
 now compare the file sizes:
 
 ```
-du -b onlyvectors.pdf onlytext.pdf onlyimages.pdf | sort -n -r
+du -b input.pdf onlyvectors.pdf onlytext.pdf onlyimages.pdf | sort -n -r
 ```
 
 example output:
