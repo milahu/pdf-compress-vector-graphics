@@ -19,6 +19,14 @@ this is a known issue, see also
 - https://support.neuxpower.com/hc/en-us/articles/360022343714
    - Unlike images which can be resized or recompressed with a more optimal quality to reduce them in size, content streams tend to be large and cannot be directly compressed. However, there are workarounds to compress the size of PDF files made from content streams. The main one is to try and reprint the PDF using a browser PDF printer and then use a PDF compressor to reduce the size of the resulting file.
 
+## high-quality JP2 raster images
+
+high-quality is 600dpi, to produce good quality when printing
+
+JP2 raster images, because JP2 offers better compression than JPG.
+on the downside, JP2 requires more memory, but most PDf viewers should have enough memory.
+WEBP raster images are not supported in PDF files
+
 ## analyze pdf size
 
 ### offline tools
