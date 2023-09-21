@@ -1086,14 +1086,19 @@ for page_number in $(seq $first_page $last_page); do
       echo
       echo "\usepackage{graphicx}"
       echo "\usepackage{tikz}"
+      echo "\usepackage{calc}"
       echo
       echo "\setlength{\paperwidth}{${page_pdf_width_pt}bp}"
       echo "\setlength{\paperheight}{${page_pdf_height_pt}bp}"
+      # https://tex.stackexchange.com/a/1213/194185
+      # this requires the "calc" package
+      echo "\setlength{\pdfpxdimen}{1in/$images_resolution} % set PDF resolution"
       echo
       echo "\begin{document}"
       echo
       echo "\pagestyle{empty}"
       echo
+      # this requires the "tikz" package
       echo "\begin{tikzpicture}[remember picture,overlay]"
       echo
 
@@ -1118,6 +1123,7 @@ for page_number in $(seq $first_page $last_page); do
         #echo "\node[anchor=north west,inner sep=0pt,xshift=${object_bbox_l_bp}pt,yshift=-${object_bbox_t_bp}pt] at (current page.north west){"
 
         # x and y -> "bp" unit in latex
+        # this requires the "graphicx" package
         echo "  \includegraphics[width=${object_bbox_x_bp}bp,height=${object_bbox_y_bp}bp]{$(basename "$object_jp2_path")}"
         #echo "  \includegraphics[width=${object_bbox_x_bp}pt,height=${object_bbox_y_bp}pt]{$(basename "$object_jp2_path")}"
 
